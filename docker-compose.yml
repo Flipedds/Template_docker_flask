@@ -1,0 +1,10 @@
+services:
+  back:
+    build: .  # localização raiz do Dockerfile
+    ports:
+      - '5000:5000' # portas
+    networks:
+      - conect # rede pode ser usada para conectar com banco de dados futuramente
+networks:
+  conect:
+    driver: bridge  # drive usado
